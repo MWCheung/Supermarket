@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Royal Supermarket</title>
+		<link href="index.css" type="text/css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<style>
+			.
+		</style>
+	</head>
+		<body>
+		  <section class="container">
+			<header>
+				<div class="topnav" id="myTopnav">
+					<img src="logo.jpg" alt="logo" id="logo">
+						<a href="#" id ="hidden">.</a>
+					  <a href="#signin">SIGN IN or REGISTER</a>
+					  <div class="dropdown">
+						<button class="dropbtn">Products 
+						  <i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+						  <a href="#">Sandwiches / サンドイッチ</a>
+						  <a href="#">Onigiri / おにぎり</a>
+						  <a href="#">Drinks / 飲み物</a>
+						  <a href="#">Sweets / お菓子</a>
+						  <a href="#">Bento / 弁当</a>
+						</div>
+					  </div>
+					  <a href="#shoponline">Shop online</a>
+					  <a href="#recipes">Recipes</a>
+					  <a href="#contact">Contact us</a>
+					  <a href="#about">About us</a>
+					  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+				</div>
+			</header>
+			  <br /><p>
+			  <br /><p>
+				<section>
+				  <article>
+					<div class="slideshow-container">
+						<div class="mySlides fade">
+						  <img src="instantramen.jpg" id="slide">
+						  <div class="text" id="slidetitel">Instant ramen</div>
+						  <div class="slideknop"><button id="new">New</button></div>
+						</div>
+
+						<div class="mySlides fade">
+						  <img src="seats.png" id="slide">
+						  <div class="text" id="slidetitel">Seats available</div>
+						  <div class="slideknop"><button id="new">New</button></div>
+						</div>
+
+						<div class="mySlides fade">
+						  <img src="microwave.jpg" id="slide">
+						  <div class="text" id="slidetitel">Microwave available</div>
+						  <div class="slideknop"><button id="new">New</button></div>
+						</div>
+					</div>
+						<br>
+					<div style="text-align:center">
+						<span class="dot"></span> 
+						<span class="dot"></span> 
+						<span class="dot"></span> 
+					</div>
+				  </article>
+				</section>
+				
+					<br /><p>
+				<p id="products">Products</p>
+					<br /><p>
+				
+				<section class="flexbox">
+					<article id="flex">
+						<div class="titel-container">
+							<img src="sandwiches.jpg" alt="sandwiches" id ="food" width="280" height="200">
+							<div class="centered">
+							Sandwiches <br/>サンドイッチ
+							</div>
+						</div>
+					</article>
+					<article id="flex">
+						<div class="titel-container">
+							<img src="onigiri.jpg" alt="onigiri" id ="food" width="280" height="200">
+							<div class="centered">
+							Onigiri <br/>おにぎり
+							</div>
+						</div>
+					</article>
+					<article id="flex">
+						<div class="titel-container">
+							<img src="starbucks.jpg" alt="starbucks" id ="food" width="280" height="200">
+							<div class="centered">
+							Drinks <br/>飲み物
+							</div>
+						</div>
+					</article>
+					<article id="flex">
+						<div class="titel-container">
+							<img src="sweets.jpg" alt="sweets" id ="food" width="280" height="200">
+							<div class="centered">
+							Sweets <br/>お菓子
+							</div>
+						</div>
+					</article>
+					<article id="flex">
+						<div class="titel-container">
+							<img src="bento.jpg" alt="bento" id ="food" width="280" height="200">
+							<div class="centered">
+							Bento <br/>弁当
+							</div>
+						</div>
+					</article>
+				</section>
+					<br /><p>
+					<br /><p>
+					<br /><p>
+					<br /><p>
+					<br /><p>
+					<br /><p>
+					
+			<footer>
+			<div class="footer">
+			  <p>Copyright © Royal Supermarket Co., LTD. All Rights Reserved.</p>
+			</div>
+			</footer>
+		  </section>
+			
+			<script>
+			function myFunction() {
+			  var x = document.getElementById("myTopnav");
+			  if (x.className === "topnav") {
+				x.className += " responsive";
+			  } else {
+				x.className = "topnav";
+			  }
+			}
+			
+			
+			var slideIndex = 0;
+				showSlides();
+
+				function showSlides() {
+				  var i;
+				  var slides = document.getElementsByClassName("mySlides");
+				  var dots = document.getElementsByClassName("dot");
+				  for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				  }
+				  slideIndex++;
+				  if (slideIndex > slides.length) {slideIndex = 1}    
+				  for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block";  
+				  dots[slideIndex-1].className += " active";
+				  setTimeout(showSlides, 2000); // Change image every 2 seconds
+				}
+			</script>
+		</body>
+</html>
